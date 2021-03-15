@@ -61,14 +61,14 @@ typedef struct {
 
 Persona* crearPersona(char nombre[], char rut[], int edad) 
 {
-  Persona *persona;
+    Persona *persona;
   
-  persona = (Persona*) malloc(sizeof(Persona));
-  strcpy(persona->nombre, nombre);
-  strcpy(persona->rut, rut);
-  persona->edad = edad;
+    persona = (Persona*) malloc(sizeof(Persona));
+    strcpy(persona->nombre, nombre);
+    strcpy(persona->rut, rut);
+    persona->edad = edad;
 
-  return persona;
+    return persona;
 }
 
 /*
@@ -86,12 +86,12 @@ typedef struct {
 
 Vector * crearVector(int n) 
 {
-  Vector *vector = (Vector*) malloc(sizeof(Vector));
+    Vector *vector = (Vector*) malloc(sizeof(Vector));
 
-  vector->capacidad = n;
-  vector->datos = malloc(n * sizeof(int));
+    vector->capacidad = n;
+    vector->datos = malloc(n * sizeof(int));
 
-  return vector;
+    return vector;
 }
 
 /*
@@ -101,7 +101,7 @@ la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) 
 {
-  v->datos[i] = valor;
+    v->datos[i] = valor;
 }
 
 /*
@@ -111,7 +111,7 @@ la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) 
 {
-  return v->datos[i];
+    return v->datos[i];
 }
 
 /*
@@ -119,13 +119,14 @@ Ejercicio 7.
 Función que suma los vectores `a` y `b` y 
 actualiza el vector `c` con el resultado de la suma.
 */
-void sumaV(Vector * a, Vector * b, Vector * c) {
-  int size = a->capacidad;
+void sumaV(Vector * a, Vector * b, Vector * c) 
+{
+    int size = a->capacidad;
 
-  for (int i = 0; i < size; i++)
-  {
-    c->datos[i] = a->datos[i] + b->datos[i];
-  }
+    for (int i = 0; i < size; i++)
+    {
+        c->datos[i] = a->datos[i] + b->datos[i];
+    }
 }
 
 /*
@@ -133,6 +134,13 @@ Ejercicio 8.
 Use las operaciones implementadas de vectores para 
 sumar (a1,a2)+(b1+b2). Almacene el resultado en el vector c.
 */
-void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
+void sumaV2(int a1, int a2, int b1, int b2, Vector *c)
+{
+    Vector *a = crearVector(1);
+    Vector *b = crearVector(1);
+    
+    asignarValor(a, 0, a1 + a2);
+    asignarValor(b, 0, b1 + b2);
 
+    sumaV(a, b, c);
 }
