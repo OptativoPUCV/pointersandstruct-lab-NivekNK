@@ -102,8 +102,7 @@ la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) 
 {
-  Vector *b = (v + i);
-  b->datos = &valor;
+  v[i].datos = &valor;
 }
 
 /*
@@ -113,8 +112,7 @@ la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) 
 {
-  Vector *b = (v + i);
-   return *b->datos;
+  return *v[i].datos;
 }
 
 /*
