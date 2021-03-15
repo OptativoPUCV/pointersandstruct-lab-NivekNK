@@ -11,18 +11,21 @@ Función que recibe 3 parámetros (a, b y c),
 y en c almacena el valor de la suma de a más b.
 */
 
-void suma(int a, int b, int * c) {
+void suma(int a, int b, int * c) 
+{
     *c = a + b;
 }
 
 /*
 Esta función suma los N primeros números del arreglo a
 */
-int sumaN(int a[], int N) {
+int sumaN(int a[], int N) 
+{
     int i;
     int tot = 0;
 
-    for(i = 0; i < N; i++) {
+    for(i = 0; i < N; i++) 
+    {
       tot += a[i];
     }
 
@@ -36,10 +39,9 @@ arreglo a y almacena el resultado en *suma.
 Utilice la función sumaN.
 */
 
-void sumaNultimos(int a[], int n, int m, int * suma) {
+void sumaNultimos(int a[], int n, int m, int * suma) 
+{
     int current = n - m;
-    
-
     *suma = sumaN((a + current), m);
 }
 
