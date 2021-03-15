@@ -121,7 +121,7 @@ Función que suma los vectores `a` y `b` y
 actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
-  int size = sizeof a / sizeof *a;
+  int size = sizeof b / sizeof *b;
 
   for (int i = 0; i < size; i++)
   {
