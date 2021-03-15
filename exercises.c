@@ -12,8 +12,7 @@ y en c almacena el valor de la suma de a más b.
 */
 
 void suma(int a, int b, int * c) {
-   *c = a + b;
-   printf("%i", *c);
+    *c = a + b;
 }
 
 /*
@@ -38,7 +37,16 @@ Utilice la función sumaN.
 */
 
 void sumaNultimos(int a[], int n, int m, int * suma) {
+    int current = n - m;
+    int b[m];
 
+    for (int i = 0; i < m; i++)
+    {
+        b[i] = a[current];
+        current++;
+    }
+
+    sumaN(b, m);
 }
 
 /*
