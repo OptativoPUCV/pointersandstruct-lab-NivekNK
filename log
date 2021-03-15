@@ -130,3 +130,9 @@ Mon Mar 15 15:15:16 UTC 2021:
  1 file changed, 6 insertions(+), 4 deletions(-)
  tests:  0|0
 ba696f0
+Mon Mar 15 15:19:22 UTC 2021: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  4|3
+total_score: 40/70
+cb37c89
